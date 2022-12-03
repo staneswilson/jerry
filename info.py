@@ -17,8 +17,8 @@ API_HASH = '912c2bcd930fb7dd5bac711b8c4d4895'
 BOT_TOKEN = '5514962644:AAGLLbdUDDpHbUfdhnZEoBb8oVNEGOzy9sw'
 
 # Bot settings
-CACHE_TIME = int(environ.get('CACHE_TIME', 300))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
+CACHE_TIME = 300
+USE_CAPTION_FILTER = False
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b558eeb0c8c9ca0f59b57.jpg https://telegra.ph/file/4ea7a4777d6a08c7d7780.jpg https://telegra.ph/file/4788bc89f40705010f2ef.jpg https://telegra.ph/file/6244dc9cd682581d3ac8f.jpg https://telegra.ph/file/0eee2657101f76f36d45c.jpg ')).split()
 
 # Admins, Channels & Users
@@ -32,7 +32,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 # MongoDB information
 DATABASE_URI = "mongodb+srv://jerry:bot@cluster0.qof3hys.mongodb.net/?retryWrites=true&w=majority"
 DATABASE_NAME = "Cluster0"
-COLLECTION_NAME = 'Telegram_files')
+COLLECTION_NAME = 'Telegram_files'
 
 # FSUB
 auth_channel = environ.get('AUTH_CHANNEL')
