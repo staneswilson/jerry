@@ -22,8 +22,8 @@ USE_CAPTION_FILTER = False
 PICS = (environ.get('PICS', 'https://telegra.ph/file/b558eeb0c8c9ca0f59b57.jpg https://telegra.ph/file/4ea7a4777d6a08c7d7780.jpg https://telegra.ph/file/4788bc89f40705010f2ef.jpg https://telegra.ph/file/6244dc9cd682581d3ac8f.jpg https://telegra.ph/file/0eee2657101f76f36d45c.jpg ')).split()
 
 # Admins, Channels & Users
-ADMINS = 1584694165, 5216689081
-CHANNELS = -1001689360667, -1001541175468, -1001265602872
+ADMINS = [1584694165, 5216689081]
+CHANNELS = [-1001689360667, -1001541175468, -1001265602872]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = None
