@@ -11,7 +11,7 @@ def is_enabled(value, default):
         return default
 
 # Bot information
-SESSION = environ.get('SESSION', 'Media_search')
+SESSION = 'Media_search'
 API_ID = 6351429
 API_HASH = '912c2bcd930fb7dd5bac711b8c4d4895'
 BOT_TOKEN = '5514962644:AAGLLbdUDDpHbUfdhnZEoBb8oVNEGOzy9sw'
@@ -26,7 +26,7 @@ ADMINS = 1584694165, 5216689081
 CHANNELS = -1001689360667, -1001541175468, -1001265602872
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_grp = environ.get('AUTH_GROUP')
+auth_grp = None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
@@ -35,8 +35,8 @@ DATABASE_NAME = "Cluster0"
 COLLECTION_NAME = 'Telegram_files'
 
 # FSUB
-auth_channel = environ.get('AUTH_CHANNEL')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
+auth_channel = ''
+AUTH_CHANNEL = None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNEL = -1001871529268
 JOIN_REQS_DB = "mongodb+srv://join:filter@cluster0.ltifpcp.mongodb.net/?retryWrites=true&w=majority"
@@ -60,7 +60,7 @@ LONG_IMDB_DESCRIPTION = False
 SPELL_CHECK_REPLY = True
 MAX_LIST_ELM = None
 INDEX_REQ_CHANNEL = LOG_CHANNEL
-FILE_STORE_CHANNEL = [int(ch) for ch in ('FILE_STORE_CHANNEL', '').split()]
+FILE_STORE_CHANNEL = ''
 MELCOW_NEW_USERS = True
 PROTECT_CONTENT = False
 PUBLIC_FILE_STORE = True
